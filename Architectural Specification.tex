@@ -1,0 +1,37 @@
+\documentclass[a4paper,oneside,openright,12pt]{report}
+\input{includes.tex}
+\begin{document}
+\include{fronts/front-arcspec}
+\thispagestyle{empty} \normalfont 
+\null \newpage
+
+\thispagestyle{empty} \normalfont 
+%\include{dedica}
+
+\thispagestyle{empty}  \cleardoublepage
+\pagenumbering{roman}
+\widowpenalties 1 10000
+\raggedbottom
+{\pagestyle{plain}
+\tableofcontents
+\cleardoublepage}
+%\include{ringraziamenti}
+
+\pagenumbering{arabic}
+
+% Chapters
+
+\thispagestyle{empty} \vspace*{.75truecm} \cleardoublepage
+
+
+
+\thispagestyle{empty} \vspace*{.75truecm} \cleardoublepage
+
+
+
+\thispagestyle{empty} \vspace*{.75truecm} \cleardoublepage
+
+\bibliography{review}
+\bibliographystyle{apalike}
+    
+\end{document}
