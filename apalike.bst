@@ -703,6 +703,38 @@ FUNCTION {phdthesis}
   fin.entry
 }
 
+FUNCTION {mscthesis}
+{ output.bibitem
+  format.authors "author" output.check
+  author format.key output                              % special for
+  output.year.check                                     % apalike
+  new.block
+  format.btitle "title" output.check
+  new.block
+  "MSc thesis" format.thesis.type output.nonnull
+  school "school" output.check
+  address output
+  new.block
+  note output
+  fin.entry
+}
+
+FUNCTION {bscthesis}
+{ output.bibitem
+  format.authors "author" output.check
+  author format.key output                              % special for
+  output.year.check                                     % apalike
+  new.block
+  format.btitle "title" output.check
+  new.block
+  "BSc thesis" format.thesis.type output.nonnull
+  school "school" output.check
+  address output
+  new.block
+  note output
+  fin.entry
+}
+
 FUNCTION {proceedings}
 { output.bibitem
   format.editors output

@@ -1,14 +1,73 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-
-\title{VR VTK Workbench}
-\author{Sandro Massa}
-\date{March 2021}
+\documentclass[a4paper,oneside,openright,12pt]{report}
+\input{includes.tex}
 
 \begin{document}
+\include{fronts/front-thesis}
+\thispagestyle{empty} \normalfont 
+\null \newpage
 
-\maketitle
+\thispagestyle{empty} \normalfont 
+%\include{dedica}
 
-\section{Introduction}
+\thispagestyle{empty}  \cleardoublepage
+\pagenumbering{roman}
+\widowpenalties 1 10000
+\raggedbottom
+{\pagestyle{plain}
+\tableofcontents
+\cleardoublepage}
+%\include{ringraziamenti}
+
+\pagenumbering{arabic}
+
+% Chapters
+
+\chapter{Introduction}\label{ch:introduction}
+
+\chapter{Literature Review}\label{ch:literature-review}
+\input{litrev/intro}
+\input{litrev/software engineering}
+\input{litrev/integration}
+\input{litrev/virtual reality}
+\input{litrev/gaps}
+
+\chapter{Architecture}\label{ch:architecture}
+\input{arcspec/intro}
+\input{arcspec/requirements}
+\input{arcspec/available choices}
+\input{arcspec/selected architecture}
+
+\chapter{Management}\label{ch:management}
+\input{actrsc/intro}
+\input{actrsc/tools used}
+\input{actrsc/managing a bachelors student}
+\input{actrsc/issues}
+
+\chapter{Design}\label{ch:design}
+\input{design/intro}
+\input{design/introspection provider}
+\input{design/toolbox manager}
+\input{design/composer}
+
+\chapter{Implementation}\label{ch:implementation}
+\input{implem/intro}
+
+\chapter{Tests}\label{ch:tests}
+\input{tests/intro}
+\input{tests/benchmarks}
+\input{tests/user acceptance tests}
+
+\chapter{Future work}\label{ch:future-work}
+
+\chapter{Conclusion}\label{ch:conclusion}
+
+\thispagestyle{empty} \vspace*{.75truecm} \cleardoublepage
+
+\bibliography{review}
+\bibliographystyle{apalike}
+
+\thispagestyle{empty} \vspace*{.75truecm} \cleardoublepage
+
+% Appendices
 
 \end{document}

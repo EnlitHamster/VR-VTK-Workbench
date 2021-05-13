@@ -1,0 +1,43 @@
+\section{Gaps}\label{sec:gaps}
+
+After the analysis of the papers in our literature survey, we condensed the knowledge we gathered inside a Table \ref{tab:gaps}. This matrix shows what each paper addresses and successfully achieves (\textit{o}), partially achieves (\textit{\texttildelow{}}) or fails to achieve (\textit{x}). The empty spaces indicate that the issues that are not addressed and a question mark (\textit{?}) that it is not clear whether the desired solution is achieved successfully or not.
+
+The knowledge we consider regards the used engines for the creation of VR environments, the pipeline editing techniques, ranging from pipeline creation to manipulation, the visualization capabilities of the provided solution, what technologies it uses to integrate VTK in the environment and which hardware it supports. In this last section, we indicate with \textit{Others} that the actual supported hardware is not directly defined but thanks to the technologies used it could be used directly, or with some minor tweaks, on other hardware as well.
+
+As it is clear from the matrix, most gaps can be found in pipeline editing. This is because the only papers tackling it were those that directly worked on creating a VR editing environment, all others did not consider this issue. Those papers only addressed quite simple creation and manipulation, and where they attempted to work on more complex interactions the results were limited.
+
+Most of our research will be focused on bringing together most of these researches into one single workbench and cover all gaps that we will face doing this. Another important factor that we consider are performances: most solutions either do not care for this aspect or do not achieve guideline standards \cite{noauthor_vr_nodate-1, noauthor_virtual_nodate}.
+
+Finally, although multiple solutions for interactive VR environments already exist for VTK visualizations, we do not have a clear path to select which best suites pipeline manipulation, and thus further investigation is required on this topic as well in order to avoid unpleasant user experience.
+
+% \usepackage{rotating}
+% \usepackage{hhline}
+
+\begin{table}
+\setlength{\tabcolsep}{4pt}
+\centering
+\refstepcounter{table}
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|} 
+\hline
+\multicolumn{1}{|l||}{} & \multicolumn{5}{c|}{Engine/IDE} & \multicolumn{4}{c|}{Pipeline editing} & \multicolumn{2}{c|}{Visualization} & \begin{sideways}\end{sideways} & \multicolumn{5}{c|}{Integration} & \multicolumn{3}{c|}{Hardware} \\ 
+\hhline{|=::===========~========|}
+\begin{sideways}Citations\end{sideways} & \begin{sideways}.NET\end{sideways} & \begin{sideways}ParaView\end{sideways} & \begin{sideways}Unity\end{sideways} & \begin{sideways}Vrui\end{sideways} & \begin{sideways}FreeVR\end{sideways} & \begin{sideways}Linear pipelines\end{sideways} & \begin{sideways}Non-linear pipelines\end{sideways} & \begin{sideways}Simple manipulation\end{sideways} & \begin{sideways}Complex manipulation\phantom{...}\end{sideways} & \begin{sideways}VR\end{sideways} & \begin{sideways}Interactive\end{sideways} & \begin{sideways}Performance\end{sideways} & \begin{sideways}OpenGL\end{sideways} & \begin{sideways}Wrappers\end{sideways} & \begin{sideways}Embedding\end{sideways} & \begin{sideways}OculusVTK\end{sideways} & \begin{sideways}OpenVR\end{sideways} & \begin{sideways}Oculus Rift\end{sideways} & \begin{sideways}HTC Vive\end{sideways} & \begin{sideways}Others\end{sideways}  \\ 
+\hhline{|=::====================|}
+\multicolumn{1}{|c||}{\cite{wheeler_virtual_2018}} & & & o & & & & & & & o & ? & o & o & & & & & o & o & o \\ 
+\hline
+\cite{oleary_enhancements_2017} & & & & o & o & & & & & o & o & ? & o & & o & & & o & o & o \\
+\hline
+\cite{dreuning_visual_2016} & & & & & & o & & o & & o & \texttildelow{} & \texttildelow{} & & o & & o & & o & & \\ 
+\hline
+\cite{kruis_creating_2017} & & & & & & o & & o & \texttildelow{} & o & o & x & & o & & o & & o & & \\ 
+\hline
+\cite{shutte_virtual_2018} & & o & & & & ? & ? & o & o & o & \texttildelow{} & & & & & & o & & o & \\ 
+\hline
+\cite{hanak_opengl_2003} & o & & & & & & & & & & & & & o & & & & & & \\ 
+\hline
+\multicolumn{1}{|c||}{\cite{noauthor_activiz_nodate}} & & & o & & & & & & & o & o & \texttildelow{} & & o & & & & o & o & o \\
+\hline
+\end{tabular}
+\label{tab:gaps}
+\caption{Matrix of knowledge gap based on literature survey}
+\end{table}

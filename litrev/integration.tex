@@ -1,0 +1,23 @@
+\section{Integration}\label{sec:integration}
+
+
+
+\subsection{Visualization Libraries}\label{sec:integration-visualization-libraries}
+
+
+
+\subsection{Engines}\label{sec:integration-engines}
+
+
+
+\subsection{Previous Integration Attempts}\label{sec:integration-previous-integration-attempts}
+
+\paragraph{Wheeler et al. (2018) \cite{wheeler_virtual_2018}} is the main source of inspiration for our work. The paper proposes a new method of integrating Unity and VTK using OpenGL context sharing. It acknowledges the existence of prior work trying to combine the two \cite{noauthor_activiz_nodate, hanak_opengl_2003, tamura_intuitive_2016}, which though present performance issues. The proposed solution achieves the set 90 FPS objective, though with some quality loss. To do this, the authors had to create a plugin that was able to interface the engine with the toolkit, as they represent data in different ways, e.g. the former uses a left-handed coordinate system whereas the latter a right-handed one. VTK is called through scripts associated with scene objects and act after the transparencies are applied in the forward rendering of the Unity scene rendering.
+
+\paragraph{O'Leary et al. (2017) \cite{oleary_enhancements_2017}} proposes two approaches for creating immersive environments with VTK. The first approach uses OpenGL context sharing and embedding the toolkit in OpenVR and Oculus. The paper further shows how these can be used and provides use cases and further enhancements of VTK algorithms. Most interesting, the paper focuses on the creation of interactive immmersive environments, which the authors view as an important field that requires still development.
+
+\paragraph{BSc Theses attempts (2016 - 2018) \cite{dreuning_visual_2016, kruis_creating_2017, shutte_virtual_2018}} work on different solutions to create an interactive VR environment to create visualizations through pipelines. They use different approaches, ranging from different libraries to different hardware. These papers provide important insights in creating adequate UIs and interactions to work with pipelines. The kind of interactions proposed are still limited to quite simple, like linear pipeline creation to single parameter modification, and use different UIs. All allow for some degree of editing and output visualization.
+
+\paragraph{Hanak et al. (2003) \cite{hanak_opengl_2003}} proposes a solution to port VTK to the .NET framework. This work highlights how integration between VTK and other environments is possible. The chosen approach is wrapper class generation. As the work is old and the approach has been explored and become established, this is an early example of how such a work can be done and results achieved. As Unity uses C\# scripts, this has been used as a tool to use VTK inside Unity.
+
+\paragraph{Kitware's C\# wrapper plugin \cite{noauthor_activiz_nodate, tamura_intuitive_2016}} is an existing tool that exposes a C\# wrapper for VTK and allows it to be used inside Unity and the .NET framework. It includes further algorithms and modelling techniques. It has been shown successfully that it can be used for VR visualization of numerical data \cite{tamura_intuitive_2016}. This being said, \cite{wheeler_virtual_2018} points out the issues with this solutions: the copy operations necessary between GPU and CPU set a hard limit for the frame rate, and drastically hinder performances as visualizations get more complex, thus limited in scalability.
